@@ -7,6 +7,13 @@ $('.get-started').on('click', function () {
     	},'slow');
 });
 
+$('.nl-submit-wrap').on('click', function () {
+    // Type code related to event here! :)
+    $('html,body').animate({
+    	scrollTop: $('.page-3').offset().top
+    	},'slow');
+});
+
 // natural language form
 
 
@@ -25,6 +32,38 @@ $('.nl-field-toggle').on('click', function (e) {
     e.preventDefault();
     $('.nl-field').toggleClass('nl-field-open');
 });
+
+$('.nl-field-toggle-2').on('click', function (e) {
+    // Type code related to event here! :)
+    e.preventDefault();
+    $('.nl-field-2').toggleClass('nl-field-open-2');
+});
+
+// selection change on.click
+// $('.nl-field-toggle').change(function()
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
