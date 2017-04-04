@@ -1,3 +1,11 @@
+
+var genre = document.getElementById('genre'),
+	genreSelect = document.getElementById('genre-select'),
+	length = document.getElementById('length'),
+	lengthSelect = document.getElementById('length-select');
+
+
+
 // get started button scroll to next page
 
 $('.get-started').on('click', function () {
@@ -14,6 +22,11 @@ $('.nl-submit-wrap').on('click', function () {
     	},'slow');
 });
 
+// $('.genre-list li').on('click', function(e) {
+//	e.preventDefault();
+//	alert('Click');
+//}
+
 // natural language form
 
 
@@ -25,7 +38,7 @@ $('.nl-submit-wrap').on('click', function () {
 		// replace the toggle value with new value
 		// fade.out ul overlap
 
-$('select').hide();
+// $('select').hide();
 
 $('.nl-field-toggle').on('click', function (e) {
     // Type code related to event here! :)
@@ -39,9 +52,31 @@ $('.nl-field-toggle-2').on('click', function (e) {
     $('.nl-field-2').toggleClass('nl-field-open-2');
 });
 
+$('.genre-list li').on('click', function (e, el) {
+	e.preventDefault();
+	var genreText = e.target.innerHTML,
+		index = $('.genre-list li').index(this);
+
+	genre.innerHTML = genreText;
+	genreSelect.getElementsByTagName('option')[index + 1].selected = true;
+
+	$('.nl-field').toggleClass('nl-field-open');
+	console.log($('#genre-select').val());
+})
+
+
 // selection change on.click
-// $('.nl-field-toggle').change(function()
-	
+
+// $('.nl-field-toggle').change(function() {
+
+
+// }
+
+// $('li').on('click', function () {
+// 	$('a.nl-field-toggle').replaceWith('selection')
+// }
+
+// $('#genre option:selected').text();
 
 
 

@@ -305,10 +305,12 @@ video {
     visibility: hidden;
     background: rgb(127,127,125);
     left: -0.5em;
-    top: 50%;
+    top: 60%;
     font-size: 80%;
+    overflow-y: scroll;
+    height: 300px;
     opacity: 0;
-    transform: translateY(-40%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
     transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
@@ -317,24 +319,26 @@ video {
     visibility: hidden;
     background: rgb(127,127,125);
     left: -0.5em;
-    top: 50%;
+    top: 60%;
     font-size: 80%;
+    overflow-y: scroll;
+    height: 300px;
     opacity: 0;
-    transform: translateY(-40%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
     transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
 .nl-field-open ul {
     visibility: visible;
     opacity: 1;
-    transform: translate(-25%) scale(1);
+    transform: translate(-18%) scale(1);
     transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
 .nl-field-open-2 ul {
     visibility: visible;
     opacity: 1;
-    transform: translate(-25%) scale(1);
+    transform: translate(-24%) scale(1);
     transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
