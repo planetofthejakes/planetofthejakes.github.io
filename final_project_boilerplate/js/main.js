@@ -52,6 +52,8 @@ $('.nl-field-toggle-2').on('click', function (e) {
     $('.nl-field-2').toggleClass('nl-field-open-2');
 });
 
+// 
+
 $('.genre-list li').on('click', function (e, el) {
 	e.preventDefault();
 	var genreText = e.target.innerHTML,
@@ -62,6 +64,18 @@ $('.genre-list li').on('click', function (e, el) {
 
 	$('.nl-field').toggleClass('nl-field-open');
 	console.log($('#genre-select').val());
+})
+
+$('.length-list li').on('click', function (e, el) {
+	e.preventDefault();
+	var lengthText = e.target.innerHTML,
+		index = $('.length-list li').index(this);
+
+	length.innerHTML = lengthText;
+	lengthSelect.getElementsByTagName('option')[index + 1].selected = true;
+
+	$('.nl-field-2').toggleClass('nl-field-open-2');
+	console.log($('#length-select').val());
 })
 
 
