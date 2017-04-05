@@ -365,6 +365,25 @@ video {
     color: yellow;
 }
 
+/* hidden nic-cage gif */
+
+.nic-gif {
+    position: absolute;
+/*    visibility: hidden;*/
+    margin-top: 200px;
+    margin-left: 750px;
+}
+
+/* .nic-gif GIPHY text "via giphy" */
+
+p {
+    position: absolute;
+/*    visibility: hidden;*/
+    margin-top: 200px;
+    margin-left: 750px;
+}
+
+
 /* ==========================================================================
    Movie Recommendation Classes
    ========================================================================== */
