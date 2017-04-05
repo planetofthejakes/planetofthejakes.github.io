@@ -1,9 +1,11 @@
 
+// natural language form variables
+
 var genre = document.getElementById('genre'),
 	genreSelect = document.getElementById('genre-select'),
 	length = document.getElementById('length'),
-	lengthSelect = document.getElementById('length-select');
-
+	lengthSelect = document.getElementById('length-select')
+	count = 0;
 
 
 // get started button scroll to next page
@@ -90,6 +92,29 @@ $('.length-list li').on('click', function (e, el) {
 			// show con air trailer
 		// else show national treasure
 			// replace iframe src url
+
+$('.page-3').hide();
+$('.con-air').hide();
+$('.national-treasure').hide();
+
+$('.nl-submit-wrap').on('click', function(e) {
+	e.preventDefault();
+
+	var value = $().val();
+
+	if (value === 1) {
+		$('.page-3, .con-air').show();
+	} else {
+		$('.page-3, .con-air').hide();
+	}
+
+	if (value > 1) {
+		$('.page-3, .national-treasure').show();
+	} else {
+		$('.page-3, .national-treasure').hide();
+	}
+
+});
 
 
 

@@ -389,7 +389,7 @@ video {
 }*/
 
 
-.con-air-trailer {
+.con-air {
     margin-top: -50px;
     text-align: center;
     position: absolute;
@@ -398,6 +398,17 @@ video {
     margin-right: -50%;
     transform: translateX(-50%) translateY(-50%);
     z-index: 999;
+}
+
+.national-treasure {
+    margin-top: -50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1000;
 }
 
 .movie-buttons {
@@ -418,8 +429,9 @@ video {
 
 
 .new-movie-wrap button {
-    border: solid 2px white;
-    padding-top: 2px;
+    border: solid 2px transparent;
+    padding-top: 12px;
+    padding-bottom: 10px;
     padding-right: 20px; 
     padding-left: 20px;
     color: white;
@@ -428,7 +440,7 @@ video {
 }
 
 .new-movie-wrap button:hover {
-    border: solid 2.5px yellow;
+    border: solid 2px yellow;
     color: yellow;
     background: transparent;
 }
@@ -439,17 +451,19 @@ video {
 }
 
 .nic-cage-wrap button {
-    border: solid 2px white;
-    padding-top: 2px;
+    border: solid 2px transparent;
+    padding-bottom: 10px;
+    padding-top: 12px;
     padding-right: 20px; 
     padding-left: 20px;
     color: white;
     background: black;
     outline: none;
+    letter-spacing: 1px;
 }
 
 .nic-cage-wrap button:hover {
-    border: solid 2.5px yellow;
+    border: solid 2px yellow;
     color: yellow;
     background: transparent;
 }
