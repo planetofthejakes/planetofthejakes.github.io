@@ -4,8 +4,7 @@
 var genre = document.getElementById('genre'),
 	genreSelect = document.getElementById('genre-select'),
 	length = document.getElementById('length'),
-	lengthSelect = document.getElementById('length-select')
-	count = 0;
+	lengthSelect = document.getElementById('length-select');
 
 
 // get started button scroll to next page
@@ -91,7 +90,6 @@ $('.length-list li').on('click', function (e, el) {
 		// if value total = 2
 			// show con air trailer
 		// else show national treasure
-			// replace iframe src url
 
 $('.page-3').hide();
 $('.con-air').hide();
@@ -100,28 +98,42 @@ $('.national-treasure').hide();
 $('.nl-submit-wrap').on('click', function(e) {
 	e.preventDefault();
 
-	var value = $().val();
+	// var value = $('option').val();
+	var selectedGenre = $('#genre-select').val(),
+		selectedLength = $('#length-select').val();
 
-	if (value === 1) {
+	// if (value === 1) {
+	// 	$('.page-3, .con-air').show();
+	// } else {
+	// 	$('.page-3, .con-air').hide();
+	// }
+
+	// if (value > 1) {
+	// 	$('.page-3, .national-treasure').show();
+	// } else {
+	// 	$('.page-3, .national-treasure').hide();
+	// }
+
+	if (selectedGenre === "1" && selectedLength === "1") {
 		$('.page-3, .con-air').show();
 	} else {
-		$('.page-3, .con-air').hide();
-	}
-
-	if (value > 1) {
 		$('.page-3, .national-treasure').show();
-	} else {
-		$('.page-3, .national-treasure').hide();
 	}
 
 });
 
 
-
-
-
-
 // .page-3 button actions
+
+$('.new-movie').on('click', function () {
+    // Type code related to event here! :)
+    $('html,body').animate({
+    	scrollTop: $('.page-2').offset().top
+    	},'slow');
+});
+
+
+// hidden nic cage gif on .page-2
 
 
 
