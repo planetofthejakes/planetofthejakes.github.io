@@ -38,7 +38,7 @@ $('.nl-submit-wrap').on('click', function () {
 		// replace the toggle value with new value
 		// fade.out ul overlap
 
-// $('select').hide();
+$('select').hide();
 
 $('.nl-field-toggle').on('click', function (e) {
     // Type code related to event here! :)
@@ -52,7 +52,7 @@ $('.nl-field-toggle-2').on('click', function (e) {
     $('.nl-field-2').toggleClass('nl-field-open-2');
 });
 
-// 
+// selection change on.click
 
 $('.genre-list li').on('click', function (e, el) {
 	e.preventDefault();
@@ -79,20 +79,24 @@ $('.length-list li').on('click', function (e, el) {
 })
 
 
-// selection change on.click
+// movie selection 
 
-// $('.nl-field-toggle').change(function() {
+// pseudo code
+// on.click of button .nl-submit
+	// pull values of selected options
+	// scroll down page
+	// display movie that = those set of values
+		// if value total = 2
+			// show con air trailer
+		// else show national treasure
+			// replace iframe src url
 
 
-// }
-
-// $('li').on('click', function () {
-// 	$('a.nl-field-toggle').replaceWith('selection')
-// }
-
-// $('#genre option:selected').text();
 
 
+
+
+// .page-3 button actions
 
 
 
