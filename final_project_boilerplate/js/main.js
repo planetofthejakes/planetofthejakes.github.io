@@ -67,15 +67,15 @@ $('.length-list li').on('click', function (e, el) {
 	console.log($('#length-select').val());
 })
 
-// FIND MOVIE button from page-2 to page-3
-$('.nl-submit-wrap').on('click', function () {
-    // Type code related to event here! :)
-    $('html,body').animate({
-    	scrollTop: $('.page-3').offset().top
-    	},700);
-    // hide gif that comes up if user clicks .nic-cage button
-    $('.nic-gif, p').hide();
-});
+// FIND MOVIE BUTTON from page-2 to page-3
+// $('.nl-submit-wrap').on('click', function () {
+//     // Type code related to event here! :)
+//     $('html,body').animate({
+//     	scrollTop: $('.page-3').offset().top
+//     	},700);
+//     // hide gif that comes up if user clicks .nic-cage button
+//     $('.nic-gif, p').hide();
+// });
 
 
 // FILM SELECTION 
@@ -87,13 +87,34 @@ $('.national-treasure').hide();
 
 $('.nl-submit').on('click', function(e) {
 	e.preventDefault();
-// attempt number 2
-	// var value = $('option').val();
+
 	// find value of genre li item and length li item
 	var selectedGenre = $('#genre-select').val(),
 		selectedLength = $('#length-select').val();
 
-// attempt number 1 
+	$('html,body').animate({
+    	scrollTop: $('.page-3').offset().top
+    	},700);	
+
+	// if genre value is 1 and length value is 1 then show con-air, else national treasure
+	// need "" around number so value and number can equal each other
+	if (selectedGenre === "1" && selectedLength === "1") {
+		setTimeout(function() {
+			$('.page-3, .con-air').show();
+		}, 700);	
+	} else {
+		setTimeout(function() {
+			$('.page-3, .national-treasure').show();
+		}, 700);	
+	}
+    // hide gif that comes up if user clicks .nic-cage button
+    $('.nic-gif, p').hide();
+
+});
+
+// attempt number 1
+	// var value = $('option').val();
+
 	// if (value === 1) {
 	// 	$('.page-3, .con-air').show();
 	// } else {
@@ -105,17 +126,6 @@ $('.nl-submit').on('click', function(e) {
 	// } else {
 	// 	$('.page-3, .national-treasure').hide();
 	// }
-
-	// if genre value is 1 and length value is 1 then show con-air, else national treasure
-	// need "" around number so value and number can equal each other
-	if (selectedGenre === "1" && selectedLength === "1") {
-		$('.page-3, .con-air').show();
-	} else {
-		$('.page-3, .national-treasure').show();
-	}
-
-});
-
 
 // .page-3 button actions
 
@@ -129,7 +139,10 @@ $('.new-movie').on('click', function () {
     $('html,body').animate({
     	scrollTop: $('.page-2').offset().top
     	},700);
-    $('.page-3').hide();
+    // create delay in order for smooth transition
+    setTimeout(function() {
+    	$('.page-3').hide();
+    }, 700);
 });
 
 $('.nic-cage').on('click', function () {
@@ -138,8 +151,10 @@ $('.nic-cage').on('click', function () {
     // show gif and p text 
     $('html,body').animate({
     	scrollTop: $('.page-2').offset().top
-    	},700);
-    $('.page-3').hide();
+    	},700);   
+    setTimeout(function() {
+    	$('.page-3').hide();
+ 	}, 700);
     $('.nic-gif, p').show();
 });
 
