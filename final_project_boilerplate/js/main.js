@@ -92,20 +92,22 @@ $('.nl-submit').on('click', function(e) {
 	var selectedGenre = $('#genre-select').val(),
 		selectedLength = $('#length-select').val();
 
-	$('html,body').animate({
-    	scrollTop: $('.page-3').offset().top
-    	},700);	
-
 	// if genre value is 1 and length value is 1 then show con-air, else national treasure
 	// need "" around number so value and number can equal each other
 	if (selectedGenre === "1" && selectedLength === "1") {
 		setTimeout(function() {
-			$('.page-3, .con-air').show();
+		$('.page-3, .con-air').show();
 		}, 700);	
+		$('html,body').animate({
+    	scrollTop: $('.page-3').offset().top
+    	}, 700);	
 	} else {
 		setTimeout(function() {
-			$('.page-3, .national-treasure').show();
+		$('.page-3, .national-treasure').show();
 		}, 700);	
+		$('html,body').animate({
+    	scrollTop: $('.page-3').offset().top
+    	}, 700);	
 	}
     // hide gif that comes up if user clicks .nic-cage button
     $('.nic-gif, p').hide();
